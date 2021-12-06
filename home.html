@@ -1,0 +1,1197 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="css/light.css">
+    <link rel="stylesheet" href="css/card-transforms.css">
+    <link href='https://cdn.fontcdn.ir/Font/Persian/Nazanin/Nazanin.css' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/switch-button.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    <!--    <link rel="apple-touch-icon" href="files/favicons/apple-touch-icon.png" sizes="180x180">-->
+    <!--    <link rel="icon" href="files/favicons/favicon-32x32.png" sizes="32x32" type="image/png">-->
+    <!--    <link rel="icon" href="files/favicons/favicon-16x16.png" sizes="16x16" type="image/png">-->
+    <!--    <link rel="manifest" href="files/favicons/site.webmanifest">-->
+    <!--    <link rel="icon" href="files/favicons/favicon.ico">-->
+    <!--    <meta name="theme-color" content="#7952b3">-->
+
+</head>
+<body class="page-background" data-bs-spy="scroll" data-bs-offset="1"
+      tabindex="0">
+<svg style="position: absolute" width="0" height="0" preserveAspectRatio="none">
+    <defs>
+        <clipPath id="clip-path" clipPathUnits="objectBoundingBox">
+            <path d="M0 0.8C0.3 1 0.7 0.6 1 0.8L1 0 0 0Z"/>
+        </clipPath>
+    </defs>
+</svg>
+<!-- Modal -->
+<div class="modal fade" id="confirmation-modal" tabindex="-1" role="dialog"
+     aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header justify-content-center">
+                <h5 class="modal-title" id="modal-title">آیا میخواهید ادامه دهید؟</h5>
+            </div>
+            <div class="modal-footer align-items-center justify-content-center bg-warning">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">خیر</button>
+                <button id="toast-btn" type="button" class="btn btn-primary" data-bs-dismiss="modal">بله
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Toast -->
+<div class="position-fixed end-0 p-3" style="z-index: 11 !important; top: 10%;">
+    <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <!--                <img src="..." class="rounded me-2" alt="...">-->
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            <small>13 دقیقه پیش</small>
+            <strong class="me-auto">پیام</strong>
+        </div>
+        <div class="toast-body">
+            عضویت در خبرنامه با موفقیت انجام شد.
+        </div>
+    </div>
+</div>
+<div class="above-600px" style="font-family: Sahel, serif">
+
+    <nav id="navbar1" class="navbar sticky-top navbar-light bg-light" style="font-size: 1vw">
+        <!--        <div class="collapse navbar-collapse d-flex justify-content-between" id="navbarNavDropdown">-->
+        <ul class="nav nav-pills flex-row justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#part1">بخش اول</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part2">بخش دوم</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part3">بخش سوم</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part4">بخش چهارم</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part5">بخش پنجم</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part6">بخش ششم</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#part7">بخش هفتم</a>
+            </li>
+        </ul>
+        <div class="d-flex justify-content-between align-items-center" style="width: 15%; margin-left: 5%">
+            <div>
+                <label class="switch">
+                    <input onchange="dark_mode(this.checked)" type="checkbox">
+                    <span class="slider round">
+                        </span>
+                </label>
+            </div>
+            <a href="#"><img class="logo" src="files/blue_logo_172x72.png" alt="Client logo"></a>
+        </div>
+        <!--        </div>-->
+    </nav>
+    <div id="part1">
+
+        <div id="part1-bg-image" class="w-100"
+             style="clip-path: url('#clip-path'); background: linear-gradient(to right, #2966ff 0%, #bb19ff 100%); height: 110vh">
+            <img src="files/(100).jpg" alt="that" style="opacity: 0.33; height: 100%; width: 100%">
+        </div>
+        <div class="position-absolute" style="top: 40vh;right: 50vw; max-width: 45vw; text-align: justify;">
+            <h1 style="font-size: 4vw;">
+                لورم ایپسوم
+            </h1>
+            <h3 style="font-size: 1.5vw;">
+                <br>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+            </h3>
+            <div type="button" class="btn-warning rounded-pill d-flex justify-content-center py-2"
+                 style="font-size: 2vw; width: 17%; margin-top: 13vh"
+                 onclick="generate_gradient('part1-bg-image')">
+                <div style="transform: translateY(-0.2vw) !important;">لورم</div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div id="part2" class="d-flex m-auto">
+        <div class="card card-transform m-auto">
+            <div class="card-header bg-primary text-white rounded-3">
+                <p style="font-size: 1.3vw">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1vw">علی شاکری</p>
+                <p style="font-size: 1.2vw">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body rounded-3 dark-white-text-bg">
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-0-0')" onmouseleave="lowlight('skill-0-0')"></i>
+                <span></span>
+                <p id="skill-0-0" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-0-1')" onmouseleave="lowlight('skill-0-1')"></i>
+                <span></span>
+                <p id="skill-0-1" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-0-2')" onmouseleave="lowlight('skill-0-2')"></i>
+                <span></span>
+                <p id="skill-0-2" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-0-3')" onmouseleave="lowlight('skill-0-3')"></i>
+                <span></span>
+                <p id="skill-0-3" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card m-auto rounded middle-card">
+            <div class="d-flex text-white align-items-center position-absolute p-1 rounded-bottom start-0"
+                 style="height: 13vh;background-color: #6a1a21; font-size: 2vw;">
+                <p>مهم</p>
+            </div>
+            <div class="card-header bg-danger text-white">
+                <p style="font-size: 1.3vw">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1vw">علی شاکری</p>
+                <p style="font-size: 1.2vw">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body dark-white-text-bg">
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-1-0')" onmouseleave="lowlight('skill-1-0')"></i>
+                <span></span>
+                <p id="skill-1-0" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-1-1')" onmouseleave="lowlight('skill-1-1')"></i>
+                <span></span>
+                <p id="skill-1-1" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-1-2')" onmouseleave="lowlight('skill-1-2')"></i>
+                <span></span>
+                <p id="skill-1-2" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-1-3')" onmouseleave="lowlight('skill-1-3')"></i>
+                <span></span>
+                <p id="skill-1-3" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card card-transform m-auto">
+            <div class="card-header bg-primary text-white">
+                <p style="font-size: 1.3vw">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1vw">علی شاکری</p>
+                <p style="font-size: 1.2vw">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body dark-white-text-bg">
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-2-0')" onmouseleave="lowlight('skill-2-0')"></i>
+                <span></span>
+                <p id="skill-2-0" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-2-1')" onmouseleave="lowlight('skill-2-1')"></i>
+                <span></span>
+                <p id="skill-2-1" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-2-2')" onmouseleave="lowlight('skill-2-2')"></i>
+                <span></span>
+                <p id="skill-2-2" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='font-size:1.3vw;color:gold'
+                   onmouseover="highlight('skill-2-3')" onmouseleave="lowlight('skill-2-3')"></i>
+                <span></span>
+                <p id="skill-2-3" class="card-text d-inline-block" style="font-size: 1.3vw">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="part3" class="bg-dark m-auto px-3 py-4 " style="width: 93%">
+        <div class="d-flex row-cols-2 align-items-center justify-content-around pb-4">
+            <div class="ps-2">
+                <div class="img-container">
+                    <img class="w-100 d-block" style="object-fit: cover" src="files/(100).jpg" alt="img 1">
+                    <div class="overlay">
+                        <p class="img-des-text" style="font-size: 2vw">
+                            This is a title
+                        </p>
+                        <br>
+                        <p class="img-des-text" style="font-size: 1vw">
+                            This is a short description about the image
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="pe-2">
+                <div class="img-container">
+                    <img class="w-100 d-block" style="object-fit: cover" src="files/(4).jpg" alt="img 1">
+                    <div class="overlay">
+                        <p class="img-des-text" style="font-size: 2vw">
+                            This is a title
+                        </p>
+                        <br>
+                        <p class="img-des-text" style="font-size: 1vw">
+                            This is a short description about the image
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row-cols-3 d-flex align-items-center">
+            <div class="ps-2">
+                <div class="img-container h-100">
+                    <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(71).jpg" alt="img 1">
+                    <div class="overlay">
+                        <p class="img-des-text" style="font-size: 2vw">
+                            This is a title
+                        </p>
+                        <br>
+                        <p class="img-des-text" style="font-size: 1vw">
+                            This is a short description about the image
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="px-2">
+                <div class="img-container h-100">
+                    <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(91).jpg" alt="img 1">
+                    <div class="overlay">
+                        <p class="img-des-text" style="font-size: 2vw">
+                            This is a title
+                        </p>
+                        <br>
+                        <p class="img-des-text" style="font-size: 1vw">
+                            This is a short description about the image
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="pe-2">
+                <div class="img-container h-100">
+                    <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(155).jpg" alt="img 1">
+                    <div class="overlay">
+                        <p class="img-des-text" style="font-size: 2vw">
+                            This is a title
+                        </p>
+                        <br>
+                        <p class="img-des-text" style="font-size: 1vw">
+                            This is a short description about the image
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="part4" class="d-flex flex-column p-5" style="height: 180vh;background-color: blueviolet;">
+        <div class="d-flex m-auto p-1 dark-white-text-bg" style="width: 93vw; height: 70vh">
+            <div class="d-inline w-50 p-4 m-auto" style="text-align: justify;">
+                <p style="font-size: 4vw;">
+                    لورم ایپسوم
+                </p>
+                <p style="font-size: 1.5vw;">
+                    <br>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                    و
+                    متون بلکه روزنامه و مجله در ستون و سطر آنچنان که
+                </p>
+                <a href="#" style="font-size: 1.5vw; color: red; text-decoration: none">
+                    <br>
+                    اطلاعات بیشتر 🠔
+                </a>
+            </div>
+            <div class="position-relative w-50 bg-danger p-4">
+                <div class="bg-warning position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 9vw; top: 15vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/red_logo_200x200.png" alt="img 1">
+                </div>
+                <div class="bg-info position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 12vw; top: 18vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/multi_logo_200x200.png" alt="img 1">
+                </div>
+                <div class="bg-secondary position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 15vw; top: 21vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/blue_logo_200x200.png" alt="img 1">
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex dark-white-text-bg m-auto p-1" style="width: 93vw; height: 70vh">
+            <div class="position-relative w-50 bg-danger p-4">
+                <div class="bg-warning position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 9vw; top: 15vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/red_logo_200x200.png" alt="img 1">
+                </div>
+                <div class="bg-info position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 12vw; top: 18vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/multi_logo_200x200.png" alt="img 1">
+                </div>
+                <div class="bg-secondary position-absolute mr-auto hover-go-top"
+                     style="width: 17vw; height: 17vw; left: 15vw; top: 21vh; border:0.33vw solid black;">
+                    <img class="w-100 h-100" src="files/blue_logo_200x200.png" alt="img 1">
+                </div>
+            </div>
+            <div class="d-inline w-50 p-4 m-auto" style="text-align: justify;">
+                <p style="font-size: 4vw;">
+                    لورم ایپسوم
+                </p>
+                <p style="font-size: 1.5vw;">
+                    <br>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                    و
+                    متون بلکه روزنامه و مجله در ستون و سطر آنچنان که
+                </p>
+                <a href="#" style="font-size: 1.5vw; color: red; text-decoration: none">
+                    <br>
+                    اطلاعات بیشتر 🠔
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <div id="part5" class="d-flex justify-content-center align-items-center w-100"
+         style="height: 150vh; background-image: url('files/contact-us-svg-path.svg')">
+        <div class="d-flex table justify-content-around align-items-center">
+            <div id="contact-us-icons" class="d-flex flex-column align-items-end col-3">
+                <div style="font-size: 1vw">
+                    <a href="#">
+                        <i class="fab fa-telegram fa-7x overflow-hidden text-white">
+                        </i>
+                    </a>
+                </div>
+                <div style="font-size: 1vw;">
+                    <a href="#">
+                        <i class="fab fa-instagram fa-7x overflow-hidden text-white"></i>
+                    </a>
+                </div>
+                <div style="font-size: 1vw">
+                    <a href="#">
+                        <i class="fab fa-whatsapp fa-7x overflow-hidden text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="contact-us-text" class="col-4">
+                <div id="x1" class="text-white text-right" style="font-size: 5vw">
+                    با ما
+                </div>
+                <div id="x2" class="text-right" style="font-size: 6vw; color: gold">
+                    در ارتباط
+                </div>
+                <div id="x3" class="text-white text-right" style="font-size: 5vw">
+                    باشید
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="d-flex mx-auto mb-auto w-50 justify-content-center fw-bold dark-white-text-bg"
+         style="font-size: 4vw; margin-top: 13%;">
+        نظرات مشتریان
+    </div>
+    <div id="part6" class="carousel slide w-75 mx-auto shadow-lg" style="height: 73vh; margin-top: 13%;"
+         data-bs-ride="carousel"
+         data-bs-interval="2000">
+        <div id="comments_section" class="carousel-inner w-100 h-100 rounded-3">
+            <div class="carousel-item h-100 bg-warning active" style="text-align: center;">
+                <div class="d-flex position-relative bg-warning justify-content-center"
+                     style="font-size:4vw; padding: 1.5vw; vertical-align: center;top: calc(50% - 4vw)">
+                    <p class="text-white">Comments Section</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#part6" role="button" data-bs-slide="prev"
+           style="left: -10vw">
+            <span class="fas fa-chevron-circle-left" style="color: gold; font-size: 2vw" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#part6" role="button" data-bs-slide="next"
+           style=" right: -10vw">
+            <span class="fas fa-chevron-circle-right" style="color: gold; font-size: 2vw;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="part7" class="mx-auto w-75"
+         style="margin-top: 10%; height: 16rem;border-radius: 0.5vw; background-color: #667ffe;">
+        <form class="d-flex flex-column py-4">
+            <p class="text-white fw-bold p-4" style="font-size: 2.5rem">خبرنامه</p>
+            <div class="row align-self-center" style="width: 90%;">
+                <div class="col">
+                    <input type="text" class="form-control form-control-lg fs-3" style="background-color: #dfe5ff"
+                           placeholder="نام">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control form-control-lg fs-3" style="background-color: #dfe5ff"
+                           placeholder="نام خانوادگی">
+                </div>
+                <div class="col">
+                    <input type="email" class="form-control form-control-lg h-100 fs-3"
+                           style="background-color: #dfe5ff"
+                           placeholder="ایمیل">
+                </div>
+                <button type="button" data-bs-toggle="modal" data-bs-target="#confirmation-modal"
+                        class="btn btn-lg btn-warning col col-auto fs-3 text-white rounded-3 me-2"
+                        style="width: 17% !important;">تایید
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <div class="w-100 bg-dark position-relative" style="height: 8rem; margin-top: -8rem; z-index: -1 !important;"></div>
+
+    <footer class="bg-dark d-flex flex-column align-content-between justify-content-center"
+            style="height: 40vh;direction: ltr; font-family: 'Times New Roman', Serif !important; font-size: 2rem">
+        <!-- Copyright -->
+        <div class="text-center text-white pt-5">
+            <a target="_blank" class="text-white text-decoration-none"
+               href="https://google.com">AliShakeri@gmail.com</a>
+        </div>
+        <div class="text-center text-white pt-5">
+            © 2021 Copyright:
+            <a target="_blank" class="text-white text-decoration-none" href="https://google.com">Ali Shakeri</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design by Ali Shakeri
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+</div>
+
+<div class="below-600px" style="font-family: Sahel, serif">
+
+
+    <div id="navbar2" class="sticky-top w-100 bg-dark text-white text-center py-3" style="height: 6rem;">
+        <div class="d-flex float-start justify-content-between align-items-center ms-3" style="width: 20rem;">
+            <div>
+                <label class="switch switch-mb">
+                    <input onchange="dark_mode(this.checked)" type="checkbox">
+                    <span class="slider slider-lg round">
+                        </span>
+                </label>
+            </div>
+            <a href="#"><img class="logo" src="files/blue_logo_172x72.png" alt="Client logo"></a>
+        </div>
+        <label class="d-flex btn btn-light px-3 py-0 rounded-0 align-items-center me-3" for="check-button"
+               style="font-size: 3rem; height: 4rem;width: fit-content">&#9776;</label>
+        <input class="btn-check" type="checkbox" id="check-button" checked>
+        <div class="d-flex flex-column p-3 text dark-white-text-bg"
+             style="height: calc(100vh - 6rem); margin-top: 1rem;"
+             id="sidebar">
+            <ul class="nav nav-pills flex-column mb-auto px-3">
+                <li class="nav-item">
+                    <a href="#part1-1" class="nav-link" aria-current="page">
+                        بخش اول
+                    </a>
+                </li>
+                <hr>
+                <li>
+                    <a href="#part2-1" class="nav-link">
+                        بخش دوم
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#part3-1" class="nav-link">
+                        بخش سوم
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#part4-1" class="nav-link">
+                        بخش چهارم
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#part5-1" class="nav-link">
+                        بخش پنجم
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#part6-1" class="nav-link">
+                        بخش ششم
+                    </a>
+                </li>
+                <hr>
+
+                <li>
+                    <a href="#part7-1" class="nav-link">
+                        بخش هفتم
+                    </a>
+                </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+    <div id="part1-1">
+
+        <div id="part1-1-bg-image" class="w-100"
+             style="clip-path: url('#clip-path'); background: linear-gradient(to right, #2966ff 0%, #bb19ff 100%); height: 110%">
+            <img src="files/(100).jpg" alt="that" style="opacity: 0.33; height: 100%; width: 100%">
+        </div>
+        <div class="position-absolute d-flex flex-column align-items-center justify-content-center align-content-center"
+             style="top: 10rem;right: 28%;max-width: 44%; text-align: justify;">
+            <h1 style="font-size: 4rem; font-weight: bold">
+                لورم ایپسوم
+            </h1>
+            <br>
+            <br>
+            <h3 style="font-size: 1.5rem; text-align: center">
+                <br>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از
+            </h3>
+            <div type="button" class="btn-warning rounded-pill d-flex justify-content-center py-2"
+                 style="font-size: 2rem; width: 17%; margin-top: 13%"
+                 onclick="generate_gradient('part1-1-bg-image')">
+                <div>لورم</div>
+            </div>
+        </div>
+    </div>
+    <div id="part2-1" class="d-flex flex-column m-auto py-5 align-content-between justify-content-between bg-danger">
+        <div class="card rounded mx-auto mb-5">
+            <div class="card-header bg-primary text-white rounded-3">
+                <p style="font-size: 1.3rem">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1rem">علی شاکری</p>
+                <p style="font-size: 1.2rem">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body  dark-white-text-bg rounded-3" style="font-size: 1.3rem !important;">
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-0-0" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-0-1" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-0-2" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-0-3" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card rounded mx-auto mb-5 mt-5" style="transform: scale(1.1)">
+            <div class="d-flex text-white align-items-center position-absolute p-1 rounded-bottom start-0"
+                 style="height: 17%;background-color: #6a1a21; font-size: 2rem;">
+                <p>مهم</p>
+            </div>
+            <div class="card-header bg-danger text-white">
+                <p style="font-size: 1.3rem">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1rem">علی شاکری</p>
+                <p style="font-size: 1.2rem">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body dark-white-text-bg" style="font-size: 1.3rem">
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-1-0" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-1-1" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-1-2" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-1-3" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card m-auto mt-5">
+            <div class="card-header bg-primary text-white">
+                <p style="font-size: 1.3rem">٩٦١٠٥٨٦٤</p>
+                <p style="font-size: 2.1rem">علی شاکری</p>
+                <p style="font-size: 1.2rem">دانشگاه شریف، مهندسی کامپیوتر، ورودی ١٣٩٦</p>
+            </div>
+            <div class="card-body dark-white-text-bg" style="font-size: 1.3rem">
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-2-0" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-2-1" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-2-2" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <i class='fas fa-chevron-circle-left' style='color:gold'></i>
+                <span></span>
+                <p id="skill0-2-3" class="card-text d-inline-block">لورم ایپسوم متن ساختگی با
+                    تولید سادگی</p>
+                <br>
+                <br>
+                <div class="d-flex justify-content-center">
+                    <a href="#" class="fab fa-telegram fa-7x overflow-hidden"
+                       style="color: #2f7dff;border-radius: 50%;"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="part3-1" class="carousel slide w-75 mx-auto shadow-lg" style="height: 30rem; margin-top: 13%;"
+         data-bs-ride="carousel"
+         data-bs-interval="2000"
+         data-bs-touch="true">
+        <div id="gallery" class="carousel-inner w-100 h-100 rounded-3">
+            <div class="carousel-item h-100 bg-warning active" style="text-align: center;">
+                <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(155).jpg" alt="img 1">
+                <div class="overlay">
+                    <p class="img-des-text" style="font-size: 2rem">
+                        This is a title
+                    </p>
+                    <br>
+                    <p class="img-des-text" style="font-size: 1rem">
+                        This is a short description about the image
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item h-100" style="text-align: center;">
+                <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(71).jpg" alt="img 2">
+                <div class="overlay">
+                    <p class="img-des-text" style="font-size: 2rem">
+                        This is a title
+                    </p>
+                    <br>
+                    <p class="img-des-text" style="font-size: 1rem">
+                        This is a short description about the image
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item h-100" style="text-align: center;">
+                <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(91).jpg" alt="img 3">
+                <div class="overlay">
+                    <p class="img-des-text" style="font-size: 2rem">
+                        This is a title
+                    </p>
+                    <br>
+                    <p class="img-des-text" style="font-size: 1rem">
+                        This is a short description about the image
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item h-100" style="text-align: center;">
+                <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(100).jpg" alt="img 4">
+                <div class="overlay">
+                    <p class="img-des-text" style="font-size: 2rem">
+                        This is a title
+                    </p>
+                    <br>
+                    <p class="img-des-text" style="font-size: 1rem">
+                        This is a short description about the image
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item h-100" style="text-align: center;">
+                <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/(4).jpg" alt="img 5">
+                <div class="overlay">
+                    <p class="img-des-text" style="font-size: 2rem">
+                        This is a title
+                    </p>
+                    <br>
+                    <p class="img-des-text" style="font-size: 1rem">
+                        This is a short description about the image
+                    </p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#part3-1" role="button" data-bs-slide="prev">
+            <span class="fas fa-chevron-circle-left" style="color: gold; font-size: 2rem" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#part3-1" role="button" data-bs-slide="next">
+            <span class="fas fa-chevron-circle-right" style="color: gold; font-size: 2rem;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="part4-1" class="d-flex flex-column p-5" style="">
+
+        <div class="d-flex flex-column m-auto p-1 bg-info" style="width: 93%; height: 70rem">
+            <div class="d-inline w-75 p-4 m-auto dark-white-text-bg" style="text-align: justify;">
+                <p style="font-size: 4rem;">
+                    لورم ایپسوم
+                </p>
+                <p style="font-size: 1.5rem;">
+                    <br>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                    و
+                    متون بلکه روزنامه و مجله در ستون و سطر آنچنان که
+                </p>
+                <a href="#" style="font-size: 1.5rem; color: red; text-decoration: none">
+                    <br>
+                    اطلاعات بیشتر 🠔
+                </a>
+            </div>
+            <div id="activities2" class="carousel slide w-75 mx-auto shadow-lg" style="height: 30rem;"
+                 data-bs-ride="carousel"
+                 data-bs-interval="2000">
+                <div class="carousel-inner w-100 h-100 rounded-3">
+                    <div class="carousel-item h-100 bg-warning active" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/black_logo_200x200.png"
+                             alt="img 1">
+                    </div>
+                    <div class="carousel-item h-100 bg-dark" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/blue_logo_200x200.png"
+                             alt="img 2">
+                    </div>
+                    <div class="carousel-item h-100 bg-success" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/red_logo_200x200.png"
+                             alt="img 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#activities2" role="button" data-bs-slide="prev">
+                    <span class="fas fa-chevron-circle-left" style="color: gold; font-size: 2rem"
+                          aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#activities2" role="button" data-bs-slide="next">
+                    <span class="fas fa-chevron-circle-right" style="color: gold; font-size: 2rem;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="d-flex flex-column m-auto p-1 bg-success" style="width: 93%; height: 70rem">
+            <div class="d-inline w-75 p-4 m-auto dark-white-text-bg" style="text-align: justify;">
+                <p style="font-size: 4rem;">
+                    لورم ایپسوم
+                </p>
+                <p style="font-size: 1.5rem;">
+                    <br>
+                    لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                    و
+                    متون بلکه روزنامه و مجله در ستون و سطر آنچنان که
+                </p>
+                <a href="#" style="font-size: 1.5rem; color: red; text-decoration: none">
+                    <br>
+                    اطلاعات بیشتر 🠔
+                </a>
+            </div>
+            <div id="activities3" class="carousel slide w-75 mx-auto shadow-lg" style="height: 30rem;"
+                 data-bs-ride="carousel"
+                 data-bs-interval="2000">
+                <div class="carousel-inner w-100 h-100 rounded-3">
+                    <div class="carousel-item h-100 bg-warning active" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/black_logo_200x200.png"
+                             alt="img 1">
+                    </div>
+                    <div class="carousel-item h-100 bg-light" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/blue_logo_200x200.png"
+                             alt="img 2">
+                    </div>
+                    <div class="carousel-item h-100 bg-info" style="text-align: center;">
+                        <img class="w-100 h-100 d-block" style="object-fit: cover" src="files/red_logo_200x200.png"
+                             alt="img 3">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#activities3" role="button" data-bs-slide="prev">
+                    <span class="fas fa-chevron-circle-left" style="color: gold; font-size: 2rem"
+                          aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#activities3" role="button" data-bs-slide="next">
+                    <span class="fas fa-chevron-circle-right" style="color: gold; font-size: 2rem;"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div id="part5-1" class="d-flex justify-content-around align-content-between align-items-center w-100"
+         style="height: 63rem; background-image: url('files/contact-us-svg-path.svg')">
+        <div class="d-flex flex-column justify-content-around h-75 w-50">
+            <div id="contact-us-icons-1" class="d-flex justify-content-around w-100">
+                <div style="font-size: 1rem">
+                    <a href="#">
+                        <i class="fab fa-telegram fa-7x overflow-hidden text-white">
+                        </i>
+                    </a>
+                </div>
+                <div style="font-size: 1rem;">
+                    <a href="#">
+                        <i class="fab fa-instagram fa-7x overflow-hidden text-white"></i>
+                    </a>
+                </div>
+                <div style="font-size: 1rem">
+                    <a href="#">
+                        <i class="fab fa-whatsapp fa-7x overflow-hidden text-white"></i>
+                    </a>
+                </div>
+            </div>
+            <div id="contact-us-text-1" class="d-flex flex-column align-items-center">
+                <div class="text-white text-right" style="font-size: 5rem">
+                    با ما
+                </div>
+                <div class="text-right" style="font-size: 5rem; color: gold">
+                    در ارتباط
+                </div>
+                <div class="text-white text-right" style="font-size: 5rem">
+                    باشید
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="d-flex mx-auto mb-auto w-50 justify-content-center fw-bold dark-white-text-bg"
+         style="font-size: 4rem; margin-top: 13%;">
+        نظرات مشتریان
+    </div>
+    <div id="part6-1" class="carousel slide w-75 mx-auto shadow-lg" style="height: 50rem; margin-top: 13%;"
+         data-bs-ride="carousel"
+         data-bs-interval="2000"
+         data-bs-touch="true">
+        <div id="comments_section-1" class="carousel-inner w-100 h-100 rounded-3">
+            <div class="carousel-item h-100 bg-warning active">
+                <div class="d-flex position-relative justify-content-center"
+                     style="font-size:4rem; padding: 1.5rem; vertical-align: center; top: calc(50% - 4rem)">
+                    <p class="text-white">Comments Section</p>
+                </div>
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#part6-1" role="button" data-bs-slide="prev"
+           style="left: -5rem">
+            <span class="fas fa-chevron-circle-left" style="color: gold; font-size: 4rem" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#part6-1" role="button" data-bs-slide="next"
+           style=" right: -7rem">
+            <span class="fas fa-chevron-circle-right" style="color: gold; font-size: 4rem;"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+    <div id="part7-1" class="mx-auto w-75"
+         style="margin-top: 10%; height: 51rem;border-radius: 0.5rem; background-color: #667ffe;">
+        <form class="d-flex flex-column h-100 py-4 align-items-center justify-content-between align-content-between ">
+            <p class="text-white fw-bold p-4" style="font-size: 3rem;">خبرنامه</p>
+            <div class="d-flex flex-column h-100 justify-content-between"
+                 style="width: 90%;font-size: 2rem; color: #b0b0b0">
+
+                <label class="form-label" for="user-name">نام</label>
+                <input id="user-name" type="text" class="form-control form-control-lg fs-2 py-3"
+                       style="background-color: #dfe5ff"
+                       placeholder="نام">
+                <label class="form-label" for="user-last-name">نام خانوادگی</label>
+                <input id="user-last-name" type="text" class="form-control form-control-lg fs-2 py-3"
+                       style="background-color: #dfe5ff"
+                       placeholder="نام خانوادگی">
+                <label class="form-label" for="user-email">ایمیل</label>
+                <input id="user-email" type="email" class="form-control form-control-lg fs-2 py-3"
+                       style="background-color: #dfe5ff"
+                       placeholder="ایمیل">
+                <button type="button" data-bs-toggle="modal" data-bs-target="#confirmation-modal"
+                        class="btn btn-lg btn-warning fs-1 text-white rounded-3 w-25 align-self-center">تایید
+                </button>
+            </div>
+        </form>
+
+    </div>
+    <div class="w-100 bg-dark position-relative"
+         style="height: 25rem; margin-top: -25rem; z-index: -1 !important;"></div>
+    <footer class="bg-dark d-flex flex-column align-content-between justify-content-center"
+            style="height: 40rem;direction: ltr; font-family: 'Times New Roman', serif !important; font-size: 2rem">
+        <!-- Copyright -->
+        <div class="text-center text-white pt-5">
+            <a target="_blank" class="text-white text-decoration-none"
+               href="https://google.com">AliShakeri@gmail.com</a>
+        </div>
+        <div class="text-center text-white pt-5">
+            © 2021 Copyright:
+            <a target="_blank" class="text-white text-decoration-none" href="https://google.com">Ali Shakeri</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design by Ali Shakeri
+        </div>
+        <!-- Copyright -->
+    </footer>
+</div>
+<script>
+    let mediaQueryList = window.matchMedia('(max-device-width: 599px)');
+    if (window.window >= 600) {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar1'
+        });
+    } else {
+        new bootstrap.ScrollSpy(document.body, {
+            target: '#navbar2'
+        });
+    }
+
+    function screenTest(e) {
+        bootstrap.ScrollSpy.getInstance(document.body).dispose();
+        if (e.matches)
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar2'
+            });
+        else
+            new bootstrap.ScrollSpy(document.body, {
+                target: '#navbar1'
+            });
+    }
+
+    mediaQueryList.addEventListener("change", screenTest);
+
+</script>
+<script>
+    let items = document.getElementsByClassName('below-600px')[0].getElementsByClassName('carousel-item');
+    let overlays = document.getElementsByClassName('below-600px')[0].getElementsByClassName('overlay');
+    for (let item of items) {
+        item.addEventListener("touchstart", tap_handler);
+    }
+    let taped_twice = false;
+
+    function tap_handler(event) {
+        if (!taped_twice) {
+            taped_twice = true;
+            setTimeout(function () {
+                taped_twice = false;
+            }, 300);
+            return false;
+        }
+        event.preventDefault();
+        for (let overlay of overlays) {
+            if (overlay.parentElement.classList.contains('active')) {
+                if (overlay.style.height === '100%')
+                    overlay.style.height = '0%';
+                else
+                    overlay.style.height = '100%';
+                break
+            }
+        }
+    }
+</script>
+<script>
+    document.getElementById("toast-btn").onclick = function () {
+        let toastElList = [].slice.call(document.querySelectorAll('.toast'));
+        let toastList = toastElList.map(function (toastEl) {
+            return new bootstrap.Toast(toastEl);
+        });
+        toastList.forEach(toast => toast.show());
+
+    };
+</script>
+<script>
+    let horizontal_comment_template = "<div class=\"carousel-item h-100\" style=\"text-align: center;\">\n" +
+        "                <div class=\"d-flex position-absolute h-100 w-50 p-4 bg-white start-0 justify-content-center align-items-center align-content-center\">\n" +
+        "                    <p class=\"border border-primary border-3 p-5 dark-white-text-bg\"\n" +
+        "                       style=\"overflow-y: auto;text-align: justify; font-size: 2vw; width: 90%; height: 100%; margin-top: 3%;\">\n" +
+        "                    </p>\n" +
+        "                </div>\n" +
+        "                <div class=\"d-inline-flex position-relative bg-warning mx-auto justify-content-center rounded-circle align-items-center\"\n" +
+        "                     style=\"z-index: 1; margin-top: 33%; font-size:2vw; padding: 1.5vw\">\n" +
+        "                    <i class=\"fa fa-quote-left text-white\"></i>\n" +
+        "                </div>\n" +
+        "                <div class='d-block h-100 w-50 position-absolute top-0 end-0 bg-danger p-4'>" +
+        "                <img class='h-100 mw-100' src=\"files/unknown.svg\"\n" +
+        "                     alt=\"First slide\">" +
+        "                </div>" +
+        "            </div>";
+
+
+    let vertical_comment_template =
+        "<div class=\"carousel-item h-100\" style=\"text-align: center;\">\n" +
+        "                <div class=\"d-flex position-absolute h-50 w-100 p-4 bg-white justify-content-center align-items-center align-content-center\">\n" +
+        "                    <p class=\"p-5 dark-white-text-bg\"\n" +
+        "                       style=\"overflow-y: auto;text-align: justify; font-size: 2rem; width: 90%; height: 100%; margin-top: 3%;\">\n" +
+        "                    </p>\n" +
+        "                </div>\n" +
+        "                <div class=\"d-inline-flex position-relative bg-warning mx-auto justify-content-center rounded-circle align-items-center\"\n" +
+        "                     style=\"z-index: 1; margin-top: 50%; font-size:2rem; padding: 1.5rem\">\n" +
+        "                    <i class=\"fa fa-quote-left text-white\"></i>\n" +
+        "                </div>\n" +
+        "                <div class='d-block h-50 w-100 position-absolute top-50'>" +
+        "                     <img class='h-100 w-100 p-5 bg-danger' src='files/unknown.svg'\n" +
+        "                          alt=\"First slide\">" +
+        "                </div>" +
+        "            </div>";
+
+    horizontal_comment_template = horizontal_comment_template.trim();
+    vertical_comment_template = vertical_comment_template.trim();
+
+
+    let customer_short_comment = "                        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است.\n" +
+        "                        چاپگرها\n" +
+        "                        و\n" +
+        "                        متون بلکه روزنامه و مجله در ستون و سطر آنچنان\n";
+    let customer_long_comment = customer_short_comment + "\n" + customer_short_comment;
+    let customer0_image_path = "files/unknown.svg";
+    let customer1_image_path = "files/avatar13.svg";
+    let customer2_image_path = "files/unknown.svg";
+    let customer3_image_path = "files/avatar4.svg";
+    document.getElementById('comments_section').appendChild(generate_customer_comment(customer0_image_path, customer_short_comment, horizontal_comment_template));
+    document.getElementById('comments_section').appendChild(generate_customer_comment(customer1_image_path, customer_long_comment, horizontal_comment_template));
+    document.getElementById('comments_section').appendChild(generate_customer_comment(customer2_image_path, customer_short_comment, horizontal_comment_template));
+    document.getElementById('comments_section').appendChild(generate_customer_comment(customer3_image_path, customer_long_comment, horizontal_comment_template));
+
+    document.getElementById('comments_section-1').appendChild(generate_customer_comment(customer0_image_path, customer_short_comment, vertical_comment_template));
+    document.getElementById('comments_section-1').appendChild(generate_customer_comment(customer1_image_path, customer_long_comment, vertical_comment_template));
+    document.getElementById('comments_section-1').appendChild(generate_customer_comment(customer2_image_path, customer_short_comment, vertical_comment_template));
+    document.getElementById('comments_section-1').appendChild(generate_customer_comment(customer3_image_path, customer_long_comment, vertical_comment_template));
+
+    function generate_customer_comment(customer_image_path, customer_comment, comment_template) {
+        let template = document.createElement('template');
+
+        template.innerHTML = comment_template;
+        let element = template.content.firstChild;
+        element.childNodes[1].childNodes[1].innerHTML = customer_comment;
+        element.childNodes[5].childNodes[1].src = customer_image_path;
+        return element;
+    }
+</script>
+<script>
+    function generate_gradient(image_id) {
+        function generate_css_color() {
+            return '#' + (Math.random() * 0xFFFFFF << 0).toString(16).padStart(6, '0');
+        }
+
+        let newColor1 = generate_css_color();
+        let newColor2 = generate_css_color();
+        document.getElementById(image_id).style.background = "linear-gradient(" + "to right, " + newColor1 + " 0%, " + newColor2 + " 100%)";
+    }
+
+    function highlight(id) {
+        if (is_dark_mode) {
+            document.getElementById(id).style.textShadow = "0.5px 0px 0px #EEE, -0.5px 0px 0px #EEE";
+        } else {
+            document.getElementById(id).style.textShadow = "0.5px 0px 0px #555, -0.5px 0px 0px #555";
+        }
+    }
+
+    function lowlight(id) {
+        document.getElementById(id).style.textShadow = null;
+    }
+</script>
+<script>
+    let light_styles = ["light.css", "cards-list-light.css", "ranking-list-light.css", "ranking-list-below-600px-light.css"];
+    let dark_styles = ["dark.css", "cards-list-dark.css", "ranking-list-dark.css", "ranking-list-below-600px-dark.css"];
+    let is_dark_mode = false;
+    let logos = document.getElementsByClassName('logo');
+
+    function dark_mode(state) {
+        //window.location.href = "https://www.google.com";
+        if (!(is_dark_mode ^ state))
+            return;
+        is_dark_mode = !is_dark_mode;
+        let theme = document.getElementsByTagName('link');
+        for (let i = 0; i < light_styles.length; i++) {
+            console.log(theme[i].getAttribute('href'));
+            if (theme[i].getAttribute('href') === 'css/' + light_styles[i]) {
+                theme[i].setAttribute('href', 'css/' + dark_styles[i]);
+            } else if (theme[i].getAttribute('href') === 'css/' + dark_styles[i]) {
+                theme[i].setAttribute('href', 'css/' + light_styles[i]);
+            }
+        }
+
+        let navbar = document.getElementById("navbar1");
+        if (is_dark_mode) {
+            navbar.classList.remove("navbar-light");
+            navbar.classList.remove("bg-light");
+            navbar.classList.add("navbar-dark");
+            navbar.classList.add("bg-dark");
+        } else {
+            navbar.classList.remove("navbar-dark");
+            navbar.classList.remove("bg-dark");
+            navbar.classList.add("navbar-light");
+            navbar.classList.add("bg-light");
+        }
+        if (is_dark_mode) {
+            logos[0].src = "files/black_logo_172x72.png";
+            logos[1].src = "files/black_logo_172x72.png";
+        } else {
+            logos[0].src = "files/blue_logo_172x72.png";
+            logos[1].src = "files/blue_logo_172x72.png";
+        }
+        console.log('switch dark mode');
+    }
+</script>
+</body>
+</html>

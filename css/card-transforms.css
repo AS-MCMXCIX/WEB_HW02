@@ -1,0 +1,21 @@
+.middle-card{
+    transform: scale(1.1);
+    transition: transform 1.5s;
+    box-shadow: 0 8px 6px -6px black;
+}
+.middle-card:hover{
+    transform: scale(1.21);
+}
+.card-transform {
+    transition: transform 1.5s;
+    box-shadow: 0 8px 6px -6px black;
+}
+
+.below-600px .card-transform:hover{
+    transform: translateY(-5vh);
+    transform: scale(1.1);
+}
+
+.above-600px .card-transform:hover{
+    transform: scale(1.1);
+}

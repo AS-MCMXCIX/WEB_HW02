@@ -1,0 +1,280 @@
+:root {
+    --scroll-bck-color: #8003a5;
+    --scroll-crn-color: black;
+    --scroll-thumb-color: #4ee85e;
+    --scroll-thumb-active-color: red;
+
+    --navbar-2-background-color: #1d1d1d;
+
+    --navbar-1-background-color: #1d1d1d;
+    --navbar-1-a-background-color: #a6f5ac;
+    --navbar-1-a-color: dodgerblue;
+    --navbar-1-a-border-color-active: #44c553;
+
+    --navbar-1-parts-color: dodgerblue;
+    --navbar-1-parts-background-color: #a6f5ac;
+    --navbar-1-parts-border-color: #186AA5;
+
+    --sidebar-background-color: #44c553;
+    --sidebar-color: #186AA5;
+
+    --team-members-color: blueviolet;
+
+    --menubutton-color: #a6f5ac;
+
+    --page-bg-color: gray;
+    --gallery-image-overlay-color: #a6f5ac;
+    --img-des-text-color: #ee4300;
+}
+
+body::-webkit-scrollbar {
+    transform: rotateX(180deg);
+    width: 12px;
+    height: 12px;
+    cursor: grab;
+    background-color: var(--scroll-bck-color);
+}
+
+body::-webkit-scrollbar-corner {
+    background-color: var(--scroll-crn-color);
+}
+
+body::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: var(--scroll-thumb-color);
+}
+
+body::-webkit-scrollbar-thumb:horizontal:active {
+    background-color: var(--scroll-thumb-active-color);
+}
+
+body::-webkit-scrollbar-thumb:vertical:active {
+    background-color: var(--scroll-thumb-active-color);
+}
+
+#sidebar {
+    width: fit-content;
+    transition: 0.67s ease !important;
+}
+
+#check-button:checked ~ #sidebar {
+    background-color: white !important;
+    transform: translateX(100%) !important;
+}
+
+.nav-pills .nav-link {
+    color: white !important;
+    border: 0;
+    border-radius: 0.25rem;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    color: white !important;
+    background-color: gray !important;
+}
+
+#contact-us-icons > div > a > i {
+    transition: 0.3s ease;
+}
+
+#contact-us-icons > div > a > i:hover {
+    transform: scale(1.13);
+    color: gold !important;
+}
+
+#x1, #x2, #x3 {
+    transition: 0.3s ease;
+}
+
+#contact-us-text:hover #x1 {
+    transform: translateY(-3vh);
+}
+
+#contact-us-text:hover #x2 {
+    transform: scale(1.2);
+}
+
+#contact-us-text:hover #x3 {
+    transform: translateY(3vh);
+}
+
+.dark-white-text-bg {
+    color: white !important;
+    background-color: #1d1d1d !important;
+}
+
+.hover-go-top {
+    z-index: auto;
+}
+
+.hover-go-top:hover {
+    z-index: 1;
+}
+
+.overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--gallery-image-overlay-color) !important;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    opacity: 0.63;
+}
+
+.img-des-text {
+    color: var(--img-des-text-color);
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    vertical-align: center;
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-container:hover .overlay {
+    height: 100%;
+}
+
+.navbar-1 {
+    background-color: var(--navbar-1-background-color);
+}
+
+.dark-mode-text {
+    color: black;
+}
+
+.navbar-1 a {
+    background-color: var(--navbar-1-a-background-color);
+    color: var(--navbar-1-a-color);
+    text-align: center;
+    height: 100%;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar-1 span {
+    float: left;
+}
+
+/* Change the color of links on hover */
+.navbar-1 a:hover {
+    color: black;
+}
+
+/* Add a color to the active/current link */
+.navbar-1 a.focus {
+    border-style: solid;
+    border-width: 0px 0px 5px 0px;
+    border-color: var(--navbar-1-a-border-color-active);
+}
+
+.wavy-container svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.navbar-1-Left {
+    float: left;
+}
+
+.navbar-2 {
+    position: absolute;
+    background-color: var(--navbar-2-background-color);
+    height: 13%;
+    width: 100%;
+}
+
+.logo {
+    max-height: 7vh;
+    max-width: 100%;
+}
+
+.side-bar {
+    position: absolute;
+    z-index: 1;
+    color: var(--sidebar-color);
+    direction: rtl;
+    background-color: var(--sidebar-background-color);
+    height: 100%;
+    width: 300px;
+    right: 0;
+    top: 10vh;
+}
+
+.page-background {
+    background-color: var(--page-bg-color);
+}
+
+span:before {
+    content: " ";
+    display: inline-block;
+    width: 32px;
+}
+
+ul#menu li {
+    display: inline;
+}
+
+html, body {
+    overflow-y: initial;
+    overflow-x: initial;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+.below-600px {
+    display: none;
+}
+
+.above-600px {
+    display: block;
+}
+
+.side-bar-active {
+    z-index: 1;
+    position: absolute;
+    color: var(--sidebar-color);
+    direction: rtl;
+    height: 100%;
+    width: 40%;
+    float: left;
+    -webkit-transition: .4s;
+    transition: .4s;
+    left: 0;
+    top: 13vh;
+    background-color: var(--sidebar-background-color);
+}
+
+@media screen and (min-device-width: 600px){
+    .below-600px {
+        display: none !important;
+    }
+
+    .above-600px {
+        display: block !important;
+    }
+}
+
+@media screen and (max-device-width: 599px) {
+    .below-600px {
+        display: block !important;
+    }
+
+    .above-600px {
+        display: none !important;
+    }
+
+}
